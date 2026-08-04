@@ -1,0 +1,20 @@
+Lab - Create First Repository
+• Create repository
+• Name:
+• git-practice
+• Initialize with README.
+• Clone locally.
+
+# Create a New Repository on GitHub
+# Repository Name:
+# git-practice
+# Initialize repository with README
+
+# Clone Repository Locally
+git clone https://github.com/USERNAME/git-practice.git
+
+# Enter Repository Folder
+cd git-practice
+
+# Check Repository Status
+git status

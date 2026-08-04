@@ -1,0 +1,29 @@
+Lab - Create a Branch
+- Create
+- git switch -c feature-about
+- Modify README.
+- Commit.
+- Push.
+
+# Open Project Folder
+cd git-practice
+
+# Create and Switch to New Branch
+git switch -c feature-about
+
+# Modify README File
+notepad README.md
+
+# Save and Close the File
+
+# Check Changes
+git status
+
+# Add Changes
+git add README.md
+
+# Commit Changes
+git commit -m "Updated README in feature-about branch"
+
+# Push Branch to GitHub
+git push -u origin feature-about

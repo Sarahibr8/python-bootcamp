@@ -1,0 +1,45 @@
+Lab- Track, Review, and Commit Changes
+Objective
+Practice the basic Git workflow:
+Check repository status
+Create and view branches
+Review file changes
+Stage changes
+Commit changes
+View commit history
+Undo the latest commit
+git status
+git branch
+git diff
+git add
+git commit
+git commit -am
+git log
+git reset HEAD~1
+
+# Check Repository Status
+git status
+
+# View Existing Branches
+git branch
+
+# Create a New File or Modify Existing File
+notepad README.md
+
+# Review File Changes
+git diff
+
+# Add Changes to Staging Area
+git add README.md
+
+# Commit Changes
+git commit -m "Added changes to README"
+
+# Commit Tracked Changes Directly
+git commit -am "Updated README"
+
+# View Commit History
+git log
+
+# Undo Latest Commit (Keep Changes)
+git reset HEAD~1

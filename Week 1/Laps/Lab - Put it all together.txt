@@ -1,0 +1,69 @@
+Lab- Put it all together
+- Create new repo
+- Get url
+- Clone one terminal
+- Make changes
+- Add to staging
+- Commit
+- Push
+- Create branch
+- Make changes
+- Add to staging
+- Commit
+- Push
+- Delete branch
+- Clone latest version from GitHub
+
+
+# Create New Repository on GitHub
+# Get Repository URL
+
+# Clone Repository Locally
+git clone REPOSITORY_URL
+
+# Enter Repository Folder
+cd REPOSITORY_NAME
+
+# Make Changes
+notepad README.md
+
+# Add Changes to Staging Area
+git add .
+
+# Commit Changes
+git commit -m "First changes"
+
+# Push Changes to GitHub
+git push
+
+
+# Create New Branch
+git switch -c feature-update
+
+# Make Changes in Branch
+notepad README.md
+
+# Add Changes to Staging Area
+git add .
+
+# Commit Changes
+git commit -m "Updated feature branch"
+
+# Push Branch to GitHub
+git push -u origin feature-update
+
+
+# Switch Back to Main Branch
+git switch main
+
+# Delete Local Branch
+git branch -d feature-update
+
+# Delete Remote Branch
+git push origin --delete feature-update
+
+
+# Clone Latest Version From GitHub
+cd ..
+
+git clone REPOSITORY_URL

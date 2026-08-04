@@ -1,0 +1,30 @@
+Lab - Push Your First Change
+• Edit README.
+• git add.
+• git commit -m "Updated README"
+• git push
+• Verify changes appear on GitHub.
+
+# Open Project Folder
+cd MyProject
+
+#Edit README File
+notepad README.md
+Save and Close the File
+
+ #Check Git Status
+git status
+
+ #Add Changes
+git add README.md
+
+ #Commit Changes
+git commit -m "Updated README"
+
+ #Push Changes to GitHub
+git push
+
+ #Verify Changes
+git status
+
+

@@ -1,0 +1,54 @@
+Lab - Create, Merge, and Reset Branche
+
+Objective
+Practice working with branches and merging changes.
+
+git branch 
+git checkout -b 
+git checkout master
+git merge 
+git merge master 
+git status 
+git add 
+git commit
+git diff 
+git reset
+git reset --hard
+
+# Check Current Branches
+git branch
+
+# Create and Switch to New Branch
+git checkout -b feature
+
+# Make Changes in New Branch
+notepad README.md
+
+# Check Changes
+git diff
+
+# Add Changes
+git add .
+
+# Commit Changes
+git commit -m "Added changes in feature branch"
+
+
+# Switch Back to Main Branch
+git checkout main
+
+# Merge Feature Branch
+git merge feature
+
+# Check Repository Status
+git status
+
+
+# Reset Changes (Keep Files)
+git reset
+
+# Undo Last Commit (Keep Changes)
+git reset HEAD~1
+
+# Reset Completely and Remove Changes
+git reset --hard
