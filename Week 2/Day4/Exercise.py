@@ -1,7 +1,7 @@
-# age = 20
+age = 20
 
-# status = "Adult" if age >= 18 else "Minor"
-# print(status)
+status = "Adult" if age >= 18 else "Minor"
+print(status)
 
 #------------
 
@@ -13,7 +13,7 @@ else:
     if score < 0 or score > 100:
         print("Score moust be btween 0 and 100 ")
     else:
-        corses = input("Enter your course: ").lower()
+        corses = input("Enter your course: ").strip().lower()
 
 
     if score >=90:
@@ -38,10 +38,3 @@ else:
                 print("Course confirmed.")
             case _:
                 print("Invalid course.")
-
-
-
-
-
-
-

@@ -75,6 +75,3 @@ y = 1
 x = 0 
 y = 1
 x , y=y , x
-
-#print the st
-

@@ -1,19 +1,19 @@
-# first = [1 ,2]
-# second = [1 ,2]
-# alias = first
+first = [1 ,2]
+second = [1 ,2]
+alias = first
 
 
-# first == second  # True : the same value
-# first is second  # False: different object
-# first is alias   # True : same object
+first == second  # True : the same value
+first is second  # False: different object
+first is alias   # True : same object
 
-# # ------
-# csv_line = "Ali,Sarah😍,Omar"
-# names = csv_line.split(",")
+# ------
+csv_line = "Ali,Sarah😍,Omar"
+names = csv_line.split(",")
 
-# message = " | ".join(names)
+message = " | ".join(names)
 
-# print(names) 
+print(names) 
 
 
 # ------
