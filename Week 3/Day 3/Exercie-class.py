@@ -161,31 +161,41 @@
 
 # Class work
 
-students = [
-    {
-        "name": "Sarah" , 
-        "scores": (98 , 95 , 88),
-        "skills": {"Python" , "Git" , "SQL"}
-    },
-    {
-        "name": "Jojo" , 
-        "scores": (90 , 80 , 79),
-        "skills": {"Python" , "Git" , "SQL"}
-    },
-]
+# students = [
+#     {
+#         "name": "Sarah" , 
+#         "scores": (98 , 95 , 88),
+#         "skills": {"Python" , "Git" , "SQL"}
+#     },
+#     {
+#         "name": "Jojo" , 
+#         "scores": (90 , 80 , 79),
+#         "skills": {"Python" , "Git" , "SQL"}
+#     },
+# ]
 
-for student in students:
-     total = 0
+# for student in students:
+#      total = 0
 
-     for score in student["scores"]:
-          total += score
+#      for score in student["scores"]:
+#           total += score
 
-     average = total / len(student["scores"])
-     student["skills"].add("Java")
-     student["average"] = average
+#      average = total / len(student["scores"])
+#      student["skills"].add("Java")
+#      student["average"] = average
 
 
-for student in students:
-     print("Name:" , student["name"])
-     print(f"Average: , {student["average"]:.2f}")
-     print("Skills:" , student["skills"])
+# for student in students:
+#      print("Name:" , student["name"])
+#      print(f"Average: , {student["average"]:.2f}")
+#      print("Skills:" , student["skills"])
+
+
+
+# ----
+name = 22
+age = "Fasial"
+
+print(age)
+print(name)
+
