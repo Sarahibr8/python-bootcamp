@@ -61,8 +61,6 @@ print(geetVAT(154 , 0.05))
 print(geetVAT.__doc__)
 help(geetVAT)
 
-
-
+total = geetVAT(680)
+print(total)
 # ----
-# Lap 7
-

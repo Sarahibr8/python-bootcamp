@@ -41,7 +41,9 @@ def calculate_tax(amout):
     return amout * tax_rate
 
 print(calculate_tax(200))
+
 # ------
+
 scores = [80 , 90 , 100]
 
 print(len(scores))
@@ -79,7 +81,7 @@ from math import factorial as fact
 today = dt.date.today()
 print(today)
 print(fact(5))
-# ------
+# # ------
 
 import random
 import statistics 
@@ -106,10 +108,3 @@ def greet(name):
 
 if __name__ == "__main__":
     print(greet("Sarah"))
-
-# ------
-
-# class work.
-n = input("Enter your name:")
-for letter in n:
-    print(letter)

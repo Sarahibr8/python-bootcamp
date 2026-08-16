@@ -106,7 +106,7 @@ print(round(getTotal(199.99) , 2))
 
 def inspect_order(item , qty):
     subtotal = 25 * qty
-    print(locals())
+    print(locals()) # display dec name
     print(locals() ["subtotal"])
 
 inspect_order("Pen" , 10)

@@ -193,9 +193,5 @@
 
 
 # ----
-name = 22
-age = "Fasial"
 
-print(age)
-print(name)
 

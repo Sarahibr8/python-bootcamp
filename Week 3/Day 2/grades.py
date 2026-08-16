@@ -12,5 +12,5 @@ def calculate_grade(score):
     else:
         return "F"
 
-if __name__ == "__main__":
+if __name__ == "__main__": #
     print("Error")

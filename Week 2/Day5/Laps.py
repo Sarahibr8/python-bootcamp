@@ -127,5 +127,5 @@ for badscore in [80 , 55 , 45 , 90]:
 
 for row in range(1 , 4):
     for column in range(1 , 4):
-        # print(f"Row : {row} , Column : {column}")
-        print(f"{row} X {column} = {row * column}")
+        print(f"Row : {row} , Column : {column}")
+        # print(f"{row} X {column} = {row * column}") جدول ضرب 

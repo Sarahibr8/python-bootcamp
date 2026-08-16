@@ -47,7 +47,11 @@
 # print(f"Area: {area}")
 
 # # -----
-# # def show_m
+# def show_message():
+#     print("Done")
+
+# result = show_message()
+# print(result) #None
 
 
 
