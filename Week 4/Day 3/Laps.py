@@ -52,18 +52,46 @@
 
 # --------------------------------------------------
 # Lap 4
-from pathlib import Path
+# from pathlib import Path
 
-path = Path("home") / "students" / "students.txt"
-# path.mkdir(parents=True , exist_ok=True)
-path.parent.mkdir(parents=True, exist_ok=True)
-print(path.is_dir())# يطلع لي هل هو مجلد او لا
-print(path.suffix) # يطلع لي امتداده وش
-print(path.is_file())
-path.write_text("Welcome to class", encoding="utf-8")
+# path = Path("home") / "students" / "students.txt"
+# # path.mkdir(parents=True , exist_ok=True)
+# path.parent.mkdir(parents=True, exist_ok=True)
+# print(path.is_dir())# يطلع لي هل هو مجلد او لا
+# print(path.suffix) # يطلع لي امتداده وش
+# print(path.is_file())
+# path.write_text("Welcome to class", encoding="utf-8")
 
 # with open(path, "w" , encoding="uft-8") as file:
 
+# --------------------------------------------------
+# Lap 5
+class Student :
+    def __init__(self , name):
+        self.name = name
+        self.score = []
+
+    def add_score(self , score):
+        if score < 0 or score > 100:
+            raise ValueError("Score must be between 0 and 100 ")
+        self.score.append(score)
+
+student = Student("Sarah")
+student.add_score(80)
+student.add_score(90)
+student.add_score(100)
+
+print(student.score)
+# --------------------------------------------------
+
+
+
+
+
+
+# --------------------------------------------------
+
+
 
 
 
@@ -74,8 +102,11 @@ path.write_text("Welcome to class", encoding="utf-8")
 
 
 
-
 # --------------------------------------------------
 
+
+
+
+# --------------------------------------------------
 
     

@@ -88,37 +88,36 @@
 # except StudentNOtFoundError as error:
 #     print("Missing student:" , error)
 # -----------------------
+
 # Practice
 from pathlib import Path
 import json
-
+class InvalidStudentError(Exception):
+    pass
 data_dir = Path("data")
-data_dir.mkdir(exist_ok=True)  
+data_dir.mkdir(exist_ok=True)
 
-data_file = data_dir / "studends.json"
-
-print(data_dir.is_dir())  
-print(data_file.exists())  
-
+data_file = data_dir / "students.json"
 students = [
-    {"name" : "Sarah" , "score" : 99} , 
-    {"name" : "Jojo" , "score": 100} ,
-    {"name" : "Bobo" , "score" : 98}
+    {"name": "Sarah", "score": 92},
+    {"name": "Bobo", "score": 85},
+    {"name": "Jojo", "score": 88}
 ]
-
-
-with data_file.open( "w" , encoding="utf-8") as file:
-    json.dump(students, file , indent = 4)
-
+with data_file.open("w", encoding="utf-8") as file:
+    json.dump(students, file, indent=4)
 try:
-   with data_file.open( "r" , encoding="utf-8") as file:
-    loaded_students = json.load(file)
-   print(loaded_students)
+    with data_file.open("r", encoding="utf-8") as file:
+        loaded_students = json.load(file)
+    for student in loaded_students:
+        if "name" not in student or "score" not in student:
+            raise InvalidStudentError("Invalid student data")
+    print(loaded_students)
 except FileNotFoundError:
-   print("Students file not found")
+    print("Students file not found")
 except json.JSONDecodeError:
-   print("Invalid JSON format")
-
+    print("Invalid JSON format")
+except InvalidStudentError:
+    print("Invalid student data")
 
 class InvalidStudentError(Exception):
     pass
