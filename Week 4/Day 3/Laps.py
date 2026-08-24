@@ -83,6 +83,7 @@ student.add_score(100)
 
 print(student.score)
 # --------------------------------------------------
+# Lap 6
 
 
 
