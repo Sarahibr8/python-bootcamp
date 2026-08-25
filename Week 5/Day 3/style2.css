@@ -1,0 +1,435 @@
+/* =========================
+   Main Page
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Segoe UI", Tahoma, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 40%,
+            rgba(190, 130, 75, 0.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 60%,
+            rgba(220, 160, 95, 0.18),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #17100d,
+            #2b1b16,
+            #3b251d
+        );
+
+    color: #f7eadb;
+
+    padding: 35px 20px;
+}
+
+
+/* =========================
+   Title
+========================= */
+
+h1 {
+    text-align: center;
+
+    margin: 0 0 35px;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    color: #f8e6d0;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 10px rgba(230, 170, 110, 0.4),
+        0 0 30px rgba(210, 140, 70, 0.25);
+}
+
+
+/* =========================
+   Form Card
+========================= */
+
+form {
+    position: relative;
+
+    width: 90%;
+    max-width: 520px;
+
+    margin: auto;
+
+    padding: 38px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(80, 53, 42, 0.72),
+            rgba(38, 25, 20, 0.82)
+        );
+
+    border: 1px solid rgba(224, 171, 116, 0.45);
+
+    box-shadow:
+        0 0 25px rgba(220, 155, 90, 0.16),
+        0 25px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 1px rgba(255, 230, 200, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   Warm Glow Around Card
+========================= */
+
+form::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -70px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background: #d99a5b;
+
+    opacity: 0.22;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+form::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    bottom: -60px;
+    left: -60px;
+
+    border-radius: 50%;
+
+    background: #b87545;
+
+    opacity: 0.18;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   Labels
+========================= */
+
+label {
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    color: #f1dcc5;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   ALL USER INPUTS
+========================= */
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-top: 2px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(211, 163, 119, 0.5);
+
+    background: rgba(255, 239, 220, 0.07);
+
+    color: #fff4e7;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================
+   Fix Email / Text Input
+========================= */
+
+input[type="text"],
+input[type="email"],
+input:not([type="checkbox"]) {
+    background: rgba(255, 239, 220, 0.07);
+
+    color: #fff4e7;
+}
+
+
+/* =========================
+   Input Hover
+========================= */
+
+input:hover,
+select:hover,
+textarea:hover {
+
+    border-color: #d8a06b;
+
+    background: rgba(255, 239, 220, 0.11);
+
+    box-shadow:
+        0 0 15px rgba(216, 160, 107, 0.12);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Input Focus
+========================= */
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #e3ad73;
+
+    background: rgba(255, 239, 220, 0.12);
+
+    box-shadow:
+        0 0 0 3px rgba(227, 173, 115, 0.12),
+        0 0 22px rgba(227, 173, 115, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   Placeholder
+========================= */
+
+input::placeholder,
+textarea::placeholder {
+
+    color: rgba(246, 225, 205, 0.5);
+}
+
+
+/* =========================
+   Select
+========================= */
+
+select {
+    cursor: pointer;
+
+    appearance: auto;
+}
+
+select option {
+    background: #33221b;
+    color: #fff1df;
+}
+
+
+/* =========================
+   Message
+========================= */
+
+textarea {
+
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =========================
+   Checkbox
+========================= */
+
+.checkbox-group {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+    padding: 14px 16px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 239, 220, 0.07);
+
+    border: 1px solid rgba(211, 163, 119, 0.45);
+
+    transition: 0.3s ease;
+}
+
+.checkbox-group:hover {
+
+    background: rgba(255, 239, 220, 0.11);
+
+    border-color: #d8a06b;
+
+    box-shadow:
+        0 0 18px rgba(216, 160, 107, 0.12);
+}
+
+.checkbox-group label {
+
+    margin: 0;
+
+    color: #f1dcc5;
+}
+
+.checkbox-group input[type="checkbox"] {
+
+    width: 19px;
+    height: 19px;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    accent-color: #d99a5b;
+}
+
+
+/* =========================
+   Send Button
+========================= */
+
+button[type="submit"] {
+
+    margin-top: 26px;
+
+    padding: 15px 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e3a05f,
+            #c97948,
+            #b9653d
+        );
+
+    background-size: 200% 200%;
+
+    color: #fffaf5;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(201, 121, 72, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-position 0.5s ease;
+}
+
+
+/* =========================
+   Button Hover
+========================= */
+
+button[type="submit"]:hover {
+
+    transform: translateY(-3px);
+
+    background-position: 100% 50%;
+
+    box-shadow:
+        0 12px 35px rgba(227, 160, 95, 0.45);
+}
+
+
+/* =========================
+   Button Click
+========================= */
+
+button[type="submit"]:active {
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    form {
+        width: 100%;
+        padding: 28px 22px;
+        border-radius: 24px;
+    }
+}

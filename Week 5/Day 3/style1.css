@@ -1,0 +1,518 @@
+/* =========================
+   Global
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #eef2f7 100%
+        );
+
+    color: #14213d;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+header {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d 0%,
+            #0b2a63 50%,
+            #123f91 100%
+        );
+
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    top: -100px;
+    right: -80px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    background: rgba(73, 115, 201, 0.15);
+
+    bottom: -120px;
+    left: -60px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   Main Layout
+========================= */
+
+main {
+    width: min(92%, 1150px);
+    margin: -30px auto 60px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #dce3ee;
+    border-radius: 22px;
+
+    padding: 38px;
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 10px 30px rgba(7, 26, 61, 0.08),
+        0 2px 8px rgba(7, 26, 61, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 45px rgba(7, 26, 61, 0.12),
+        0 4px 12px rgba(7, 26, 61, 0.06);
+}
+
+
+/* =========================
+   Headings
+========================= */
+
+h2 {
+    margin: 0 0 24px;
+
+    color: #071a3d;
+
+    font-size: 27px;
+    font-weight: 750;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+h2::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 6px;
+    height: 30px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #123f91,
+            #4973c9
+        );
+}
+
+p {
+    color: #53627a;
+}
+
+
+/* =========================
+   About Image
+========================= */
+
+img {
+    display: block;
+
+    width: 100%;
+    max-width: 850px;
+    height: 400px;
+
+    object-fit: cover;
+
+    margin: 24px auto 28px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dce3ee;
+
+    box-shadow:
+        0 15px 35px rgba(7, 26, 61, 0.16);
+}
+
+
+/* =========================
+   Table
+========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    margin-top: 18px;
+    overflow: hidden;
+
+    border: 1px solid #dce3ee;
+    border-radius: 16px;
+
+    background: white;
+
+    box-shadow:
+        0 6px 20px rgba(7, 26, 61, 0.06);
+}
+
+caption {
+    caption-side: top;
+    text-align: left;
+
+    font-weight: 600;
+
+    color: #66758c;
+
+    padding-bottom: 12px;
+}
+
+thead th {
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d,
+            #123f91
+        );
+
+    color: white;
+
+    padding: 17px 18px;
+
+    text-align: left;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+tbody td {
+    padding: 17px 18px;
+
+    border-bottom: 1px solid #e8edf4;
+
+    color: #34445e;
+
+    background: white;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover td {
+    background: #f2f6fc;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+form {
+    margin-top: 12px;
+}
+
+fieldset {
+    border: 1px solid #d8e0ec;
+
+    border-radius: 18px;
+
+    padding: 28px;
+    margin-bottom: 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #f5f7fb 100%
+        );
+}
+
+legend {
+    padding: 8px 16px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d,
+            #123f91
+        );
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 12px rgba(18, 63, 145, 0.22);
+}
+
+label {
+    color: #14213d;
+
+    font-weight: 650;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+
+    margin-top: 7px;
+    padding: 14px 16px;
+
+    font-size: 15px;
+
+    color: #14213d;
+
+    background: #ffffff;
+
+    border: 1px solid #c7d0df;
+    border-radius: 12px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+input::placeholder {
+    color: #8b98aa;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #123f91;
+
+    box-shadow:
+        0 0 0 4px rgba(18, 63, 145, 0.12);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Radio & Checkbox
+========================= */
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #123f91;
+
+    width: 17px;
+    height: 17px;
+
+    cursor: pointer;
+
+    vertical-align: middle;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    cursor: pointer;
+}
+
+
+/* =========================
+   Submit Button
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 16px 24px;
+
+    border: none;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071a3d,
+            #123f91,
+            #315eb8
+        );
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 24px rgba(18, 63, 145, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(18, 63, 145, 0.38);
+
+    filter: brightness(1.08);
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    margin-top: 60px;
+
+    padding: 28px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #06152f,
+            #0b2a63
+        );
+
+    color: #b9c6d9;
+
+    border-top: 1px solid #123f91;
+}
+
+footer p {
+    margin: 0;
+
+    color: #b9c6d9;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 60px 20px;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    main {
+        width: 94%;
+        margin-top: -22px;
+    }
+
+    section {
+        padding: 25px;
+        border-radius: 17px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    fieldset {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 12px 9px;
+    }
+
+    img {
+        height: 260px;
+    }
+}

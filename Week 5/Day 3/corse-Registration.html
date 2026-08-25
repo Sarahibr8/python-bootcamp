@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Course Registration</h1>
+</header>
+
+<main>
+
+    <section>
+        <h2>About the Program</h2>
+
+        <img src="Courses.jpg"
+             alt="Students collaborating on laptops in a training academy classroom"
+             width="400">
+
+        <p>
+            Welcome to the Tuwaiq Academy course registration page. Our program offers
+            a range of technical courses designed to help learners build practical skills
+            in web development, design, and programming. Browse the available courses
+            below and fill out the registration form to reserve your seat.
+        </p>
+    </section>
+
+    <section>
+        <h2>Available Courses</h2>
+
+        <table border="1">
+            <caption>Current course offerings</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Course Code</th>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Instructor</th>
+                    <th scope="col">Duration</th>
+                    <th scope="col">Seats Available</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>SQL503</td>
+                    <td>Introduction to Database</td>
+                    <td>Sarah Alsubaie</td>
+                    <td>4 weeks</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>JAVA509</td>
+                    <td>Java Programming</td>
+                    <td>Dalal Alqarni</td>
+                    <td>6 weeks</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td>ASP.NET</td>
+                    <td>Web Development</td>
+                    <td>Mashail Aldhmashi</td>
+                    <td>3 weeks</td>
+                    <td>15</td>
+                </tr>
+
+                <tr>
+                    <td>PY301</td>
+                    <td>Python for Data Analysis</td>
+                    <td>Khadijah Alobudallah</td>
+                    <td>8 weeks</td>
+                    <td>5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label for="full-name">Full Name</label><br>
+
+                    <input type="text"
+                           id="full-name"
+                           name="full-name"
+                           required
+                           minlength="3"
+                           placeholder="Jane Doe">
+                </p>
+
+                <p>
+                    <label for="email">Email Address</label><br>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           required
+                           placeholder="jane@example.com">
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth</label><br>
+
+                    <input type="date"
+                           id="dob"
+                           name="dob"
+                           required>
+                </p>
+
+                <p>
+                    <label for="gender">Gender</label><br>
+
+                    <select id="gender" name="gender" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                        <option value="prefer-not-to-say">
+                            Prefer not to say
+                        </option>
+                    </select>
+                </p>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Selection</legend>
+
+                <p>
+                    <label for="course">Choose a Course</label><br>
+
+                    <select id="course" name="course" required>
+
+                        <option value="">-- Select a course --</option>
+
+                        <option value="SQL503">
+                            SQL503 - Introduction to Database
+                        </option>
+
+                        <option value="JAVA509">
+                            JAVA509 - Java Programming
+                        </option>
+
+                        <option value="ASP.NET">
+                            ASP.NET - Web Development
+                        </option>
+
+                        <option value="PY301">
+                            PY301 - Python for Data Analysis
+                        </option>
+
+                    </select>
+                </p>
+
+                <p>
+                    Preferred Schedule<br>
+
+                    <input type="radio"
+                           id="schedule-morning"
+                           name="schedule"
+                           value="morning"
+                           required>
+                    <label for="schedule-morning">Morning</label><br>
+
+                    <input type="radio"
+                           id="schedule-afternoon"
+                           name="schedule"
+                           value="afternoon">
+                    <label for="schedule-afternoon">Afternoon</label><br>
+
+                    <input type="radio"
+                           id="schedule-evening"
+                           name="schedule"
+                           value="evening">
+                    <label for="schedule-evening">Evening</label>
+                </p>
+
+                <p>
+                    <input type="checkbox"
+                           id="terms"
+                           name="terms"
+                           value="agreed"
+                           required>
+
+                    <label for="terms">
+                        I agree to the terms and conditions
+                    </label>
+                </p>
+
+                <p>
+                    <input type="checkbox"
+                           id="newsletter"
+                           name="newsletter"
+                           value="subscribed">
+
+                    <label for="newsletter">
+                        Subscribe me to the newsletter
+                    </label>
+                </p>
+
+            </fieldset>
+
+            <p>
+                <button type="submit">Submit Registration</button>
+            </p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Tuwaiq Academy</p>
+</footer>
+
+</body>
+</html>

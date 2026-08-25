@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <h1>Contact Form</h1>
+  <form action="/Week 5/" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name">
+
+    <br><br>
+
+    <label for="email">Email</label>
+    <input id="email" name="email">
+
+    <br><br>
+    <label for="Programming Languages">Programming Languages</label>
+    <select id="Programming Languages" name="subject">
+      <option value="SQL">SQL</option>
+      <option value="Python">Python</option>
+      <option value="HTML">HTML</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <br>
+
+    <div class="checkbox-group">
+      <label for="checkbox">Agree:</label>
+      <input type="checkbox" id="checkbox" name="agree">
+    </div>
+
+    <br>
+
+    <label for="messege">Messege:</label>
+    <textarea name="message"></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</body>
+</html>
