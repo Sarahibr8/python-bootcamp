@@ -2,10 +2,6 @@
 
 > **From an empty folder to a ready-to-code project.**
 
-<p align="center">
-  <img src="assets/week-01-project-zero.png" alt="Week 1 - Project Zero" width="900">
-</p>
-
 ---
 
 ## 🎯 Mission of the Week
@@ -26,6 +22,12 @@ This week was the starting point of the journey: setting up a Python project, cr
 | `06` | 🔧 Git | Initialized a Git repository |
 | `07` | 🌿 Branches | Worked with a feature branch |
 | `08` | 🔀 Merge & Reset | Practiced merge and reset concepts |
+
+---
+
+<p align="center">
+  <img src="assets/week-01-project-zero-full.png" alt="Week 1 - Project Zero — Full Dashboard" width="1100">
+</p>
 
 ---
 
