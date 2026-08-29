@@ -2,7 +2,7 @@
 
 # 💻 Web Application Development with Python
 
-### <sub> Tuwaiq Academy • Programming Fundamentals Bootcamp </sub>
+### <sub>Tuwaiq Academy • Programming Fundamentals Bootcamp</sub>
 
 **A hands-on journey from programming fundamentals to real-world web applications.**
 
@@ -130,6 +130,9 @@ python-bootcamp/
 ├── Week 3/
 ├── Week 4/
 ├── Week 5/
+│
+├── assets/
+│   └── bootcamp-overview.png
 │
 └── README.md
 ```
