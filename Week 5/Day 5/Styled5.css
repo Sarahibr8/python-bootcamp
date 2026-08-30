@@ -1,0 +1,87 @@
+button {
+    background-color: #67c7d1;
+    font: 1em sans-serif;
+    color: rgb(234, 234, 238);
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #3f5870;
+    transform: translateY(-4px);
+}
+
+:root {
+    --main-color:rgb(183, 183, 218);
+    --accent-color:rgb(140, 61, 151);
+}
+
+.cta {
+    background: var(--main-color);
+    color: rgb(243, 243, 247);
+    transition: transform .25s ease,
+                background .25s ease;
+}
+
+.cta:hover,
+.cta:focus {
+    transform: translateY(-4px);
+    background: var(--accent-color);
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: fadeIn 1s ease forwards;
+
+}
+
+@keyframes spin {
+    0% {
+        
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.Loader {
+    animation: spin 20s linear infinite;
+}
+
+
+@keyframes slideIn {
+    0% {
+        
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.hero-title {
+    animation: slideIn .9s ease forwards;
+}
+
+.hero-button {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+
+}
