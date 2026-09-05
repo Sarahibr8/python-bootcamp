@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+
+<p>
+    <a href="{% url 'dashboard:home' %}">← Back to Home</a>
+</p>
+
+<h2>Course List</h2>
+
+<p>Explore our available courses.</p>
+
+<p>
+    <a href="{% url 'courses:detail' slug='python' %}">
+        Python Course
+    </a>
+</p>
+
+{% endblock %}
