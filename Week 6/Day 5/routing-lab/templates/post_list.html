@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+<h1>Blog Posts</h1>
+
+<p>
+    <a href="{% url 'blog:post_detail' 1 %}">Post 1</a>
+</p>
+
+<p>
+    <a href="{% url 'blog:post_detail' 2 %}">Post 2</a>
+</p>
+
+<p>
+    <a href="{% url 'blog:category' 'python' %}">Python Category</a>
+</p>
+
+{% endblock %}

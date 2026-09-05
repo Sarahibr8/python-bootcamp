@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Routing Lab{% endblock %}</title>
+</head>
+<body>
+
+<nav>
+    <a href="{% url 'pages:home' %}">Home</a>
+    <a href="{% url 'pages:about' %}">About</a>
+    <a href="{% url 'pages:contact' %}">Contact</a>
+    <a href="{% url 'blog:post_list' %}">Blog</a>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
