@@ -194,8 +194,22 @@ The different projects and challenges helped me build a stronger understanding o
 
 ---
 
-### 🐍 Python Bootcamp — Week 6
+## 🏁 Week 6 Complete
 
-**Django • Projects • Views • URLs • Routing • Challenges**
+**Status:** ✅ Completed
 
-> Week 6 completed. One step closer to becoming a stronger Python developer. 🚀
+---
+
+## 🔗 Keep Exploring
+
+⬅️ **Previous Week — Week 5**
+
+🏠 **Course Home**
+
+➡️ **Next Week — Week 7**
+
+---
+
+<p align="center">
+  <sub>Sarah's Coding Journey • Week 06</sub>
+</p>
