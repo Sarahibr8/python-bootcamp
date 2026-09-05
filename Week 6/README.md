@@ -202,11 +202,11 @@ The different projects and challenges helped me build a stronger understanding o
 
 ## 🔗 Keep Exploring
 
-⬅️ **Previous Week — Week 5**
+[⬅️ **Previous Week — Week 5**](../Week%205/README.md)
 
-🏠 **Course Home**
+[🏠 **Course Home**](../README.md)
 
-➡️ **Next Week — Week 7**
+[**Next Week — Week 7 ➡️**](../Week%207/README.md)
 
 ---
 
