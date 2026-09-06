@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 def home(request):
+    print(request.method)
     return render(request, 'home.html')
 
 def about(request):
