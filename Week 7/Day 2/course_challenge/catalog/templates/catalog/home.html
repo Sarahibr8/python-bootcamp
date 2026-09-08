@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">WELCOME</p>
+  <h1>Hello, {{ username|title }}!</h1>
+  <p>Explore courses and build your programming skills.</p>
+
+  <a class="primary-button" href="{% url 'courses' %}">
+    View Courses
+  </a>
+</section>
+
+<section class="home-section">
+  <h2>What you will learn</h2>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>Python</h3>
+      <p>Programming fundamentals and problem solving.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>SQL</h3>
+      <p>Working with databases and queries.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Django</h3>
+      <p>Building websites with Python.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

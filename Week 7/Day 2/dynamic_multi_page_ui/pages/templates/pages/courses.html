@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <span class="eyebrow">LEARN WITH US</span>
+  <h1>Available Courses</h1>
+  <p>Choose a course and start improving your skills.</p>
+</section>
+
+<div class="cards">
+  {% for course in courses %}
+    <article class="card">
+      <div class="card-top">
+        <span class="course-icon">📚</span>
+
+        {% if course.available %}
+          <span class="badge available">Available</span>
+        {% else %}
+          <span class="badge unavailable">Closed</span>
+        {% endif %}
+      </div>
+
+      <h2>{{ course.name }}</h2>
+      <p class="level">Level: {{ course.level }}</p>
+
+    </article>
+
+  {% empty %}
+    <div class="empty-state">
+      <h2>No courses yet</h2>
+      <p>Please come back later.</p>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

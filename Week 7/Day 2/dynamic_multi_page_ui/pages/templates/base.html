@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %}Dynamic Multi-Page UI{% endblock %}</title>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  {% include "pages/includes/navbar.html" %}
+
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2026 Dynamic Multi-Page UI</p>
+  </footer>
+</body>
+</html>

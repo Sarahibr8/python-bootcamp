@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ course.name }}{% endblock %}
+
+{% block content %}
+<section class="detail-card">
+  <img src="{% static course.image %}" alt="{{ course.name }} course image">
+
+  <div class="detail-content">
+    <p class="eyebrow">{{ course.level }} LEVEL</p>
+
+    <h1>{{ course.name|title }}</h1>
+
+    <p class="description">
+      {{ course.description|safe }}
+    </p>
+
+    {% if course.students == 0 %}
+      <p class="no-students">No students enrolled yet.</p>
+    {% else %}
+      <p class="students">{{ course.students }} students enrolled</p>
+    {% endif %}
+
+    <a class="back-link" href="{% url 'courses' %}">
+      ← Back to Courses
+    </a>
+  </div>
+</section>
+{% endblock %}

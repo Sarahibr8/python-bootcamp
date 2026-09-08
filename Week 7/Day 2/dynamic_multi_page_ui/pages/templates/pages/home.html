@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <h1>Welcome to the Home Page</h1>
+  <p>Build reusable pages with Django templates.</p>
+</section>
+
+<h2 class="section-title">Our Items</h2>
+
+<div class="cards">
+  <article class="card">
+    <h2>Python</h2>
+    <p>Programming language</p>
+    <p class="status available">Available</p>
+  </article>
+
+  <article class="card">
+    <h2>Django</h2>
+    <p>Web framework</p>
+    <p class="status available">Available</p>
+  </article>
+
+  <article class="card">
+    <h2>HTML & CSS</h2>
+    <p>Web technologies</p>
+    <p class="status unavailable">Not Available</p>
+  </article>
+</div>
+{% endblock %}
