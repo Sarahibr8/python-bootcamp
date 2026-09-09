@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Future Academy - Student Profile</title>
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+    <main class="profile-card">
+
+        <div class="academy-badge">
+            FUTURE ACADEMY
+        </div>
+
+        <h1>Student Profile</h1>
+
+        <div class="title-line"></div>
+
+        <div class="profile-image-wrapper">
+
+            {% if uploaded_file %}
+                <img
+                    src="{{ media_url }}{{ uploaded_file.name }}"
+                    alt="Student profile image"
+                    class="profile-image"
+                >
+            {% else %}
+                <img
+                    src="{% static 'images/default-avatar.png' %}"
+                    alt="Default student avatar"
+                    class="profile-image"
+                >
+            {% endif %}
+
+        </div>
+
+        <h2>Sarah Alsubaie</h2>
+
+        <p class="student-role">
+            Python Bootcamp Student
+        </p>
+
+        <section class="upload-section">
+
+            <h3>Upload Profile Image</h3>
+
+            <form method="POST" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                <div class="file-input">
+                    <input
+                        type="file"
+                        name="file"
+                        id="file"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Upload Image
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

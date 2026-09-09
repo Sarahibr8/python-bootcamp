@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Instagram</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}">
+</head>
+
+<body>
+
+    <h1>Mini Instagram</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            required
+        >
+
+        <textarea
+            name="description"
+            placeholder="Description"
+            required
+        ></textarea>
+
+        <input
+            type="file"
+            name="image"
+            accept=".jpg,.jpeg,.png"
+            required
+        >
+
+        <button type="submit">
+            Post
+        </button>
+
+    </form>
+
+
+    {% for post in posts %}
+
+    <div class="post">
+
+        <p class="post-user">
+            @{{ post.username }}
+        </p>
+
+        <img
+            src="{{ post.image.url }}"
+            alt="Post image"
+        >
+
+        <p class="post-description">
+            {{ post.description }}
+        </p>
+
+        <p class="post-likes">
+            {{ post.likes }} likes
+        </p>
+
+        <a
+            href="{% url 'like_post' post.id %}"
+            class="like-button"
+        >
+            ❤️ Like
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</body>
+
+</html>
