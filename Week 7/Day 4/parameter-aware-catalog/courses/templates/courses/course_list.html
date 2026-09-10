@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Courses</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Available Courses</h1>
+
+        <!-- Search & Filters -->
+        <form method="get" class="filter-form">
+
+            <input
+                type="text"
+                name="search"
+                value="{{ search }}"
+                placeholder="Search courses..."
+            >
+
+            <select name="category">
+                <option value="">All Categories</option>
+
+                <option value="backend"
+                    {% if category == "backend" %}selected{% endif %}>
+                    Backend
+                </option>
+
+                <option value="frontend"
+                    {% if category == "frontend" %}selected{% endif %}>
+                    Frontend
+                </option>
+
+                <option value="database"
+                    {% if category == "database" %}selected{% endif %}>
+                    Database
+                </option>
+
+                <option value="tools"
+                    {% if category == "tools" %}selected{% endif %}>
+                    Tools
+                </option>
+            </select>
+
+            <select name="difficulty">
+                <option value="">All Difficulties</option>
+
+                <option value="beginner"
+                    {% if difficulty == "beginner" %}selected{% endif %}>
+                    Beginner
+                </option>
+
+                <option value="intermediate"
+                    {% if difficulty == "intermediate" %}selected{% endif %}>
+                    Intermediate
+                </option>
+
+                <option value="advanced"
+                    {% if difficulty == "advanced" %}selected{% endif %}>
+                    Advanced
+                </option>
+            </select>
+
+            <button type="submit">Filter</button>
+
+        </form>
+
+
+        <!-- Courses -->
+        <section class="courses-grid">
+
+            {% for course in courses %}
+
+                <article class="course-card">
+
+                    <h2>{{ course.title }}</h2>
+
+                    <p>
+                        Category:
+                        {{ course.category }}
+                    </p>
+
+                    <p>
+                        Difficulty:
+                        {{ course.difficulty }}
+                    </p>
+
+                    <a
+                        href="{% url 'course_detail' course.id %}"
+                        class="details-btn"
+                    >
+                        View Details
+                    </a>
+
+                </article>
+
+            {% empty %}
+
+                <p class="no-results">
+                    No courses found.
+                </p>
+
+            {% endfor %}
+
+        </section>
+
+
+        <!-- Pagination -->
+        {% if total_pages > 1 %}
+
+            <div class="pagination">
+
+                {% if page > 1 %}
+
+                    <a href="?page={{ page|add:'-1' }}&search={{ search }}&category={{ category }}&difficulty={{ difficulty }}">
+                        Previous
+                    </a>
+
+                {% endif %}
+
+
+                <span>
+                    Page {{ page }} of {{ total_pages }}
+                </span>
+
+
+                {% if page < total_pages %}
+
+                    <a href="?page={{ page|add:'1' }}&search={{ search }}&category={{ category }}&difficulty={{ difficulty }}">
+                        Next
+                    </a>
+
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+    </main>
+
+</body>
+</html>

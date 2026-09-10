@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ product.name }}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <main class="detail-page">
+
+        <a href="{% url 'product_list' %}" class="back-link">
+            ← Back to Products
+        </a>
+
+        <section class="product-detail-card">
+
+            <div class="detail-content">
+
+                <span class="detail-category">
+                    {{ product.category }}
+                </span>
+
+                <h1>{{ product.name }}</h1>
+
+                <p class="description">
+                    {{ product.description }}
+                </p>
+
+                <div class="product-info">
+
+                    <p>
+                        <strong>Price</strong>
+                        {{ product.price }}
+                    </p>
+
+                    <p>
+                        <strong>Rating</strong>
+                        ★ {{ product.rating }}
+                    </p>
+
+                </div>
+
+                <nav class="tabs">
+
+                    <a href="{% url 'product_detail' product.id %}?tab=details"
+                       class="{% if tab == 'details' %}active{% endif %}">
+                        Details
+                    </a>
+
+                    <a href="{% url 'product_detail' product.id %}?tab=reviews"
+                       class="{% if tab == 'reviews' %}active{% endif %}">
+                        Reviews
+                    </a>
+
+                    <a href="{% url 'product_detail' product.id %}?tab=shipping"
+                       class="{% if tab == 'shipping' %}active{% endif %}">
+                        Shipping
+                    </a>
+
+                </nav>
+
+                <div class="tab-content">
+
+                    {% if tab == "details" %}
+
+                        <h2>Product Details</h2>
+
+                        <p>
+                            {{ product.description }}
+                        </p>
+
+                    {% elif tab == "reviews" %}
+
+                        <h2>Reviews</h2>
+
+                        <p>
+                            This product has a rating of
+                            <strong>{{ product.rating }}</strong>
+                            out of 5.
+                        </p>
+
+                    {% elif tab == "shipping" %}
+
+                        <h2>Shipping</h2>
+
+                        <p>
+                            Fast and reliable shipping is available.
+                        </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 Error</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1e293b;
+            min-height: 100vh;
+            padding: 50px 40px;
+        }
+
+        .error-page {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .error-card {
+            width: 100%;
+            max-width: 700px;
+            padding: 60px;
+            background: white;
+            border: 1px solid #e3e8f0;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(30, 50, 90, 0.08);
+        }
+
+        .error-code {
+            display: inline-block;
+            color: #2563eb;
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .error-card h1 {
+            color: #1e3a8a;
+            font-size: 38px;
+            margin-bottom: 18px;
+        }
+
+        .error-card p {
+            color: #64748b;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #eff6ff;
+            color: #2563eb;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main class="error-page">
+
+        <section class="error-card">
+
+            <span class="error-code">
+                404
+            </span>
+
+            <h1>
+                Product Not Found
+            </h1>
+
+            <p>
+                Sorry, the product you're looking for doesn't exist.
+            </p>
+
+            <a href="{% url 'product_list' %}" class="back-link">
+                ← Back to Products
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
