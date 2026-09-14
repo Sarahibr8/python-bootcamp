@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<span class="label">DJANGO LAB</span>
+
+<h1>{{ title }}</h1>
+
+<p class="message">
+    {{ message }}
+</p>
+
+<a href="{% url 'home' %}" class="button">
+    ← Back to Home
+</a>
+
+{% endblock %}

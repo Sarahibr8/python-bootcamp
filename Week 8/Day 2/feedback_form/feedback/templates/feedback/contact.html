@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f4f1ea;
+            color: #292929;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0 0 10px;
+            font-size: 38px;
+            color: #355c5a;
+        }
+
+        .header p {
+            margin: 0;
+            color: #777;
+            font-size: 15px;
+        }
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #355c5a;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 13px 15px;
+            border: 2px solid #ddd6ca;
+            border-radius: 10px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+            transition: 0.25s;
+            background: #fffdf9;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        input:hover,
+        textarea:hover {
+            border-color: #a9c2bc;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #355c5a;
+            box-shadow: 0 0 0 4px rgba(53, 92, 90, 0.12);
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border-color: #d96c5f;
+        }
+
+        .error {
+            color: #c94f43;
+            font-size: 14px;
+            margin: 7px 0 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #355c5a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .submit-btn:hover {
+            background: #294947;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(53, 92, 90, 0.25);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 28px 22px;
+            }
+
+            .header h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1>Send Feedback</h1>
+            <p>We would love to hear your thoughts.</p>
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="field">
+                {{ form.name.label_tag }}
+                {{ form.name }}
+
+                {% for error in form.name.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="field">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+
+                {% for error in form.email.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="field">
+                {{ form.message.label_tag }}
+                {{ form.message }}
+
+                {% for error in form.message.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+
+            <div class="field">
+                {{ form.rating.label_tag }}
+                {{ form.rating }}
+
+                {% for error in form.rating.errors %}
+                    <p class="error">{{ error }}</p>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

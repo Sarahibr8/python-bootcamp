@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Preferences & Cart{% endblock %}</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f1e8;
+            color: #26332b;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .page-card {
+            background: white;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(38, 51, 43, 0.08);
+            border: 1px solid #e7e0d4;
+            text-align: center;
+        }
+
+        .label {
+            display: inline-block;
+            color: #6b806f;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .message {
+            font-size: 22px;
+            margin-bottom: 28px;
+            color: #53665a;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            background: #52695a;
+            color: white;
+            font-weight: bold;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            background: #3f5446;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #8a918a;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            .page-card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="page-card">
+            {% block content %}
+            {% endblock %}
+        </section>
+
+        <footer class="footer">
+            Week 8 • Cookies & Sessions • Django
+        </footer>
+
+    </main>
+
+</body>
+</html>

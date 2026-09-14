@@ -1,0 +1,55 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Preferences & Cart{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="card">
+
+        <p class="eyebrow">DJANGO LAB</p>
+
+        <h1>Preferences & Cart</h1>
+
+        <p class="subtitle">
+            Manage your theme preference and shopping cart.
+        </p>
+
+        <div class="actions">
+
+            <a href="{% url 'set_theme' 'light' %}" class="button">
+                🎨 Light Theme
+            </a>
+
+            <a href="{% url 'set_theme' 'dark' %}" class="button">
+                🌙 Dark Theme
+            </a>
+
+            <a href="{% url 'cart' %}" class="button">
+                🛒 View Cart
+            </a>
+
+            <a href="{% url 'add_to_cart' %}" class="button">
+                ➕ Add Product
+            </a>
+
+            <a href="{% url 'clear_cart' %}" class="button">
+                🗑️ Clear Cart
+            </a>
+
+        </div>
+
+        <p class="current-theme">
+            Current theme: <strong>{{ theme }}</strong>
+        </p>
+
+    </div>
+
+    <p class="footer">
+        Week 8 • Cookies & Sessions • Django
+    </p>
+
+</div>
+
+{% endblock %}
