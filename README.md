@@ -24,7 +24,7 @@ The journey combines daily practice, hands-on exercises, mini projects, larger p
 
 ---
 
-## 🎯 What I'll Learn
+## 🎯 What I'm Learning
 
 | Area | Focus |
 |---|---|
@@ -87,7 +87,7 @@ The journey combines daily practice, hands-on exercises, mini projects, larger p
  ↓
 08  Databases & ORM            ✅
  ↓
-09  Current Stage               🟣
+09  Current Stage — Day 1        🟣
  ↓
 10  Advanced Django             ⏳
  ↓
@@ -130,6 +130,10 @@ python-bootcamp/
 ├── Week 3/
 ├── Week 4/
 ├── Week 5/
+├── Week 6/
+├── Week 7/
+├── Week 8/
+├── Week 9/
 │
 ├── assets/
 │   └── bootcamp-overview.png
