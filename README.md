@@ -81,26 +81,26 @@ The journey combines daily practice, hands-on exercises, mini projects, larger p
  ↓
 05  HTML
  ↓
-06  CSS                    ← CURRENTLY HERE
+06  CSS                      ✅
  ↓
-07  Django Basics
+07  Django Basics              ✅
  ↓
-08  Databases & ORM
+08  Databases & ORM            ✅
  ↓
-09  Users & Authentication
+09  Current Stage               🟣
  ↓
-10  Advanced Django
+10  Advanced Django             ⏳
  ↓
-11  APIs & Deployment
+11  APIs & Deployment           ⏳
  ↓
-12  Capstone Project
+12  Capstone Project            🏆
 ```
 
 ### 📍 Current Progress
 
-**Week 5 / 12 — CSS**
+**Week 9 / 12 — Day 1**
 
-`████████░░░░░░░░░░░░` **In Progress**
+`███████████████░░░░░` **In Progress**
 
 > One step at a time. Every project adds another piece to the bigger picture. ✨
 
@@ -149,11 +149,11 @@ Each week contains the work, exercises, projects, and a dedicated visual summary
 | Week 02 | ✅ Completed |
 | Week 03 | ✅ Completed |
 | Week 04 | ✅ Completed |
-| Week 05 | 🟣 In Progress |
-| Week 06 | ⏳ Upcoming |
-| Week 07 | ⏳ Upcoming |
-| Week 08 | ⏳ Upcoming |
-| Week 09 | ⏳ Upcoming |
+| Week 05 | ✅ Completed |
+| Week 06 | ✅ Completed |
+| Week 07 | ✅ Completed |
+| Week 08 | ✅ Completed |
+| Week 09 | 🟣 In Progress |
 | Week 10 | ⏳ Upcoming |
 | Week 11 | ⏳ Upcoming |
 | Week 12 | 🏆 Capstone |
@@ -162,8 +162,8 @@ Each week contains the work, exercises, projects, and a dedicated visual summary
 
 ## 👩‍💻 Trainee
 
-**Sarah**  
-📧 `saraibrahim.als8@gmail.com`
+**Sarah Alsubaie**  
+🔗 [LinkedIn](https://www.linkedin.com/in/sarah-alsubaie-a41199217/) · [GitHub](https://github.com/Sarahibr8)
 
 ---
 
