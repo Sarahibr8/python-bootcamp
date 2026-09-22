@@ -8,7 +8,7 @@
 
 🐍 Python · 🌐 Web Development · 🗄️ Databases · 🔀 Git & GitHub · 🚀 Django
 
-<img src="assets/bootcamp-overview-week9.svg" alt="Web Application Development with Python — Bootcamp Overview" width="100%">
+<img src="assets/bootcamp-overview.png" alt="Web Application Development with Python — Bootcamp Overview" width="100%">
 
 </div>
 
